@@ -1,6 +1,6 @@
 # Portfollio
 
-This portfolio is a small project using HTML,CSS,bootstarp 
+This portfolio is a small project using HTML,CSS,bootstrap 
 [Live Heroku Deployment](https://portfollio121.herokuapp.com/)
 ![image](https://user-images.githubusercontent.com/108457305/178119094-89ea2c97-ec25-4e11-b173-6ce1c826b366.png)
 
