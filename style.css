@@ -24,9 +24,10 @@ nav {
 
 nav .menu {
   display: flex;
-  width: 40%;
+  width: 60%;
   justify-content: space-between;
   align-items: center;
+  font-size:25px;
 
 }
 
@@ -55,9 +56,10 @@ main h1 {
 
 main img {
   border-radius: 50%;
-  width: 100%;
+  width: 50%;
   border: 10px solid var(--buttonColor);
-  filter: drop-shadow(0px 0px 6px #000)
+  filter: drop-shadow(0px 0px 6px #000);
+  float:right;
 }
 
 main .left{
@@ -66,7 +68,7 @@ main .left{
   padding: 5% 0%;
 }
 main .left span {
-  padding-top: 10%;
+  padding-top: 5%;
   inline-size: 80%;
 }
 
@@ -98,6 +100,7 @@ section .para {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
+  font-size: 20px;
 }
 
 section .para .para-1, .para-2, .para-3 {
@@ -133,6 +136,7 @@ section .container {
 section .container .description {
   width: 50%;
   color: var(--desFont);
+  font-size: 20px;
 }
 
 section .container .media {
@@ -146,6 +150,7 @@ section .container .media img {
 
 section .container .description p span {
   font-weight: bold;
+  font-size:20px;
 }
 
 section .container .description span.cred {
