@@ -1,72 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: monospace sans-serif;
-}
-.font-primary {
-  color: #00abae;
-}
-.title-icon {
-  font-size: 20px;
-  font-weight: bold;
-}
-p {
-  font-size: 14px;
+  padding: 0 5vw;
 }
 
-h2 {
-  font-weight: bold;
-  font-size: 23px;
-  margin-bottom: 20px;
-}
-a.font-black {
-  color: black !important;
-}
-#about {
-  margin: 60px auto;
-  max-width: 400px;
-  text-align: center;
-}
-#about img {
-  border-radius: 50%;
-  width: 120px;
-  margin-bottom: 10px;
-}
-#about .name {
-  font-size: 19px;
-}
-#about .vocation {
-  font-size: 17px;
-  color: #ababab;
-  margin-bottom: 10px;
-}
-#about .skills {
-  font-size: 14px;
-  color:#00abae;
-  margin-bottom: 10px;
-}
-#about .email {
-  margin-top: 14px;
-  font-size: 15px;
-}
-#about .icons {
-  margin-top: 20px;
-  font-size: 30px;
-}
-#about .icons a {
-  color: black;
+:root {
+  --mainFont: 'Avenir';
+  --buttonColor: #00ABAE;
+  --subFont: 'Roboto';
+  --desFont: #575757;
 }
 
-#Project {
-  margin: 60px auto;
-  width: 80%;
-}
-#Project h2 {
-  text-align: center;
-}
-#Project .card img {
+nav {
+  font-family: var(--subFont);
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  border-radius: 3%;
+  /* margin-top: 1.5vw; */
 }
-#Project .card-title {
+
+nav .menu {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav .menu a:hover {
+  border-bottom: 1px solid var(--buttonColor);
+}
+
+nav h1 span {
+  color: var(--buttonColor);
+}
+
+main {
+  font-family: var(--mainFont);
+  display: flex;
+  margin-top: 50px;
+}
+
+main h1 {
+  font-weight: normal;
+}
+
+main img {
+  border-radius: 50%;
+  width: 100%;
+  border: 10px solid var(--buttonColor);
+  filter: drop-shadow(0px 0px 6px #000)
+}
+
+main .left{
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0%;
+}
+main .left span {
+  padding-top: 10%;
+  inline-size: 80%;
+}
+
+main .left .social-button {
+  padding-top: 5%;
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  
+}
+
+main button {
+  border: none;
+  padding: 8% 12%;
+  background: var(--buttonColor);
+  color: white;
+  border-radius: 5px;
+
+}
+
+section .do h1, .do-2 h1, .container .description h4 {
+  padding: 5% 0;
+  font-family: var(--subFont);
+}
+
+section .para {
+  display: flex;
+  font-family: var(--subFont);
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+section .para .para-1, .para-2, .para-3 {
+  width: 30%;
+}
+
+section .skills, h1 {
+  padding: 5% 0;
+  font-family: var(--subFont);
+  width: 100%;
+}
+
+section .logos {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-row-gap: 10%;
+  align-items: center;
+}
+
+section .logos img {
+  width: 80px;
+  height: 50px;
+}
+
+section .container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 4%;
+}
+
+section .container .description {
+  width: 50%;
+  color: var(--desFont);
+}
+
+section .container .media {
+  width: 50%;
+} 
+
+section .container .media img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+section .container .description p span {
   font-weight: bold;
 }
 
+section .container .description span.cred {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  font-weight: normal;
+  line-height: 20px;
+
+}
+
+section .container .description button {
+  border: none;
+  padding: 2.5%;
+  background: var(--buttonColor);
+  color: white;
+  border-radius: 5px;
+}
+
+section .container .description .des-buttons {
+  margin-bottom: 5%;
+}
+
+section .container .media {
+  position: relative;
+}
+
+section .container .media .play {
+  position: absolute;
+  z-index: 1;
+  width: 78%;
+  left: 11%;
+  background-color: rgba(0 0 0 / 34%);
+  padding: 2%;
+  bottom: 1%;
+  border-radius: 10px;
+}
+
+section .bottom {
+  text-align: center;
+  font-family: var(--subFont);
+}
+
+section .bottom h1 {
+  padding: 3% 0%;
+}
+
+footer {
+  text-align: center;
+  padding: 4%;
+  font-family: var(--subFont);
+}
+
+footer img {
+  margin-top: 3%;
+}
+
+@media screen and (max-width: 800px) {
+  section .do .para {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+  }
+  section .para .para-1, .para-2, .para-3 {
+      width: 100%;
+  }
+  main {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  nav .menu {
+      width: 70%;
+      gap:5%
+  }
+  main .left span {
+      inline-size: 100%;
+  }
+  section .container {
+      display: flex;
+      flex-direction: column;
+  }
+  section .container .media {
+      width: 100%;
+  }
+  section .container .description {
+      width: 100%;
+  }
+}
